@@ -233,8 +233,8 @@ header {
     }
 
     #illustration {
-        width: 70vw;
-        height: 55dvh;
+        width: 60vw;
+        height: 50dvh;
         display: flex;
         align-items: flex-start;
         //border: 2px solid red;
@@ -250,7 +250,7 @@ header {
             transform-style: preserve-3d;
             transition: 5s;
             //transform: perspective(1200px) rotateY(0deg);
-            margin-top: 5dvh;
+            margin-top: 7dvh;
             background-image: url('images/purple-logo.png');
             background-size: contain;          /* Scales the image to cover the entire container */
             background-position: center;     /* Centers the image within the container */
