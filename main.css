@@ -164,7 +164,7 @@ header .nav-links.show {
 }
 
 #hero {
-  height: 80dvh;
+  max-height: 80dvh;
   width: 100vw;
   display: flex;
   align-items: center;
