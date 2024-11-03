@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/gold-logo.png" alt=""></a>
+        <nav class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <script src="menu.js"></script>
+   <!-- <div class="checkout-container">
+        <div class="shoe-image">
+            <img src="images/crocs (2).avif" alt="Shoe Image">
+        </div>
+        <div class="checkout-details">
+            <h1>Zeer Lime Green</h1>
+            <p class="price">$150.00</p>
+            <p>Select Size:</p>
+            <div class="size-options">
+                <button class="size-btn" data-size="4">4</button>
+                <button class="size-btn" data-size="5">5</button>
+                <button class="size-btn" data-size="6">6</button>
+                <button class="size-btn" data-size="7">7</button>
+                <button class="size-btn" data-size="8">8</button>
+                <button class="size-btn" data-size="9">9</button>
+                <button class="size-btn" data-size="10">10</button>
+                <button class="size-btn" data-size="11">11</button>
+                <button class="size-btn" data-size="12">12</button>
+                <button class="size-btn" data-size="13">13</button>
+                <button class="size-btn" data-size="14">14</button>
+            </div>
+            <a href="https://buy.stripe.com/test_fZefZegp379Ugr6bII"><button class="add-to-cart">Add to Cart</button></a>
+        </div>
+    </div>
+    <script src="checkout.js"></script> -->
+
+    <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1QGO5g08TagaiaidakSVHPzG"
+  publishable-key="pk_test_51QEnE908TagaiaidAbDKu7ArEzhS7qz6dGcIaIOY7YxvbxoCdXbJNfp9r8M7FPvqh5ht1RmJwBV7DJOtCtYf3QSk00bWp73qKa"
+>
+</stripe-buy-button>
+</body>
+</html>

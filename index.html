@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Martian+Mono&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="images/gold-logo.png" alt=""></a>
+        <nav class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <script src="menu.js"></script>
+
+    <section id="hero">
+      <div id="main">
+        <div class="footprint-background">
+            <div class="footprints">
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+                <i class="fas fa-shoe-prints"></i>
+            </div>
+        </div>
+        <div id="order-now">
+            <h1>Walk</h1>
+            <h2>The World Is Watching You</h2>
+            <a href="/checkout.html">Order Now</a>
+        </div>
+      </div>
+      <div id="illustration">
+        <div class="box">
+            <span style="--i:1;"><img src="images/crocs.png" alt=""></span>
+            <span style="--i:2;"><img src="images/crocs1.png" alt=""></span>
+            <span style="--i:3;"><img src="images/crocs2.png" alt=""></span>
+            <span style="--i:4;"><img src="images/crocs3.png" alt=""></span>
+            <span style="--i:5;"><img src="images/crocs4.png" alt=""></span>
+        </div>
+      </div>
+      <div id="scroll">
+        <div id="scrolldown" class="scrolldown" style="--color: #CCE6F4">
+            <div class="chevrons">
+               <div class="chevrondown"></div>
+               <div class="chevrondown"></div>
+            </div>
+         </div>
+      </div>
+    </section>
+
+    <script>
+        let box = document.querySelector('.box');
+        let degrees = 0;
+
+        var move = () => {
+            degrees -= 45;
+            box.style = `transform: perspective(1200px) rotateY(${degrees}deg)`;
+            if(degrees === -360) {
+                degrees = 0;
+            }
+            console.log(degrees);
+        };
+
+        setInterval(move, 4000); 
+
+    </script>
+    
+</body>
+</html>

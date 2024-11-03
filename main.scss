@@ -1,0 +1,297 @@
+
+$primary-color: #F1E9DA;
+$secondary-color: #FFBD00;
+$accent-color: #9E0059;
+$light-color: #FAFAFA;
+
+@import 'scrolldown';
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+
+// Mixins for breakpoints
+@mixin respond($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (min-width: 600px) { @content;
+            .nav-links {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                gap: 1rem;
+                background: none;
+                padding: 0;
+            }
+        
+            .hamburger {
+                display: none;
+            }
+         }
+    }
+    @else if $breakpoint == desktop {
+        @media (min-width: 1024px) { @content; }
+    }
+}
+
+// Base styles for mobile (default)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $primary-color;
+    color: $primary-color;
+    font-family: 'Playpen Sans', cursive;
+    overflow: hidden;
+}
+
+header {
+    max-width: 100dvw;
+    height: 10dvh;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    //border: red 2px solid;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: white;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #ffbd00;
+
+        img{
+            height: 4vh;
+        }
+    }
+    
+    /* Mobile First Styling */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 2rem;
+        background-color: #333;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background 0.3s;
+    }
+    
+    .nav-links a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+    
+    /* Hamburger Menu */
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: $secondary-color;
+        transition: 0.3s;
+    }
+    
+    /* Show menu when clicking on hamburger */
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+#hero {
+    height: 80dvh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    //border: 2px solid red;
+
+    #main {
+        min-height: 20dvh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //border: 2px solid red;
+        flex-direction: column;
+        gap: 1rem;
+        
+        .footprint-background {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -1; // Ensures this div is behind other page elements
+        }
+        
+        .footprints {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .footprints i {
+            font-size: 3rem;
+            color: #000;
+            opacity: 0.8;
+            animation: glowSequence 5s infinite;
+        }
+        
+        // Apply a sequential delay to each icon to create the left-to-right effect
+        .footprints i:nth-child(1) { animation-delay: 0s; }
+        .footprints i:nth-child(2) { animation-delay: 1.5s; }
+        .footprints i:nth-child(3) { animation-delay: 2.5s; }
+        .footprints i:nth-child(4) { animation-delay: 3.5s; }
+        .footprints i:nth-child(5) { animation-delay: 4.5s; }
+        .footprints i:nth-child(6) { animation-delay: 5.5s; }
+        .footprints i:nth-child(7) { animation-delay: 6.5s; }
+        
+        @keyframes glowSequence {
+            0%, 100% {
+                color: #000;
+                text-shadow: none;
+            }
+            50% {
+                color: $accent-color;
+                //text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+            }
+        }
+
+        #order-now {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            h1 {
+                font-size: 15vw;
+                font-weight: bold;
+                color: $accent-color;
+                //border: red solid 2px;
+            }
+
+            h2 {
+                font-size: 5vw;
+                font-weight: bold;
+                color: $secondary-color;
+            }
+    
+            a {
+                display: inline-block;
+                padding: 0.75rem 3rem;
+                font-size: 1rem;
+                font-weight: bold;
+                color: #fff;
+                background-color: $accent-color;
+                text-decoration: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 4px 2px 14px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 4px 2px 14px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 4px 2px 14px 0px rgba(0,0,0,0.75);
+            
+                &:hover {
+                    background-color: #e6a700;
+                    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+                    transform: translateY(-2px);
+                }
+            
+                &:active {
+                    background-color: #cc9700;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    transform: translateY(1px);
+                }
+            }
+        }
+    }
+
+    #illustration {
+        width: 70vw;
+        height: 55dvh;
+        display: flex;
+        align-items: flex-start;
+        //border: 2px solid red;
+        //padding: 10px;
+        
+        
+        .box {
+           // border: 2px solid red;
+            position: relative;
+            aspect-ratio : 1 / 2.5;
+            width: 100%;
+            height: 70%;
+            transform-style: preserve-3d;
+            transition: 5s;
+            //transform: perspective(1200px) rotateY(0deg);
+            margin-top: 5dvh;
+            background-image: url('images/purple-logo.png');
+            background-size: contain;          /* Scales the image to cover the entire container */
+            background-position: center;     /* Centers the image within the container */
+            background-repeat: no-repeat;    /* Prevents the image from repeating */
+            background-attachment: fixed;    /* Keeps the background fixed during scroll */
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                transform-origin: center;
+                transform-style: preserve-3d;
+                transform: rotateY(calc(var(--i) * 45deg))  translateZ(360px);
+                //-webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #fffffe) ;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    user-select: none;
+                   // background-color: $primary-color;
+                    //border-radius: 10px;
+                }
+            }
+        }
+    }
+
+
+    #scroll {
+        width: 100vw;
+        height: 2dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+       // border: 2px solid red;
+    }
+}
