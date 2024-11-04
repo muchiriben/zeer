@@ -238,7 +238,7 @@ header .nav-links.show {
   gap: 0.5rem;
 }
 #hero #main #order-now h1 {
-  font-size: 15vw;
+  font-size: 12vw;
   font-weight: bold;
   color: #9E0059;
 }
@@ -246,6 +246,7 @@ header .nav-links.show {
   font-size: 5vw;
   font-weight: bold;
   color: #FFBD00;
+  text-align: center;
 }
 #hero #main #order-now a {
   display: inline-block;

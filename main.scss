@@ -43,7 +43,7 @@ body {
     background-color: $primary-color;
     color: $primary-color;
     font-family: 'Playpen Sans', cursive;
-    overflow: hidden;
+    overflow: hidden;    
 }
 
 header {
@@ -190,7 +190,7 @@ header {
             gap: 0.5rem;
 
             h1 {
-                font-size: 15vw;
+                font-size: 12vw;
                 font-weight: bold;
                 color: $accent-color;
                 //border: red solid 2px;
@@ -200,6 +200,7 @@ header {
                 font-size: 5vw;
                 font-weight: bold;
                 color: $secondary-color;
+                text-align: center;
             }
     
             a {
