@@ -137,6 +137,7 @@ header {
         justify-content: center;
         //border: 2px solid red;
         flex-direction: column;
+        overflow-x: hidden;
         gap: 1rem;
         
         .footprint-background {
@@ -329,6 +330,7 @@ header {
 .footer-content p {
     font-size: 1rem;
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 5px;
 }

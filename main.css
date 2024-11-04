@@ -178,6 +178,7 @@ header .nav-links.show {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
   gap: 1rem;
 }
 #hero #main .footprint-background {
@@ -356,6 +357,7 @@ header .nav-links.show {
 .footer-content p {
   font-size: 1rem;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 5px;
 }
