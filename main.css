@@ -172,7 +172,7 @@ header .nav-links.show {
   gap: 1rem;
 }
 #hero #main {
-  height: 20dvh;
+  height: 25dvh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@ header .nav-links.show {
 }
 #hero #illustration {
   width: 60vw;
-  height: 45dvh;
+  height: 40dvh;
   display: flex;
   align-items: flex-start;
 }
